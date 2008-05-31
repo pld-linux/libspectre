@@ -23,6 +23,7 @@ Summary:	Header files for libspectre library
 Summary(pl.UTF-8):	Pliki nagłówkowe biblioteki libspectre
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
+Requires:	ghostscript-devel >= 8.61-2
 
 %description devel
 Header files for libspectre library.
