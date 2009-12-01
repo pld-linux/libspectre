@@ -11,6 +11,7 @@ BuildRequires:	autoconf >= 2.59
 BuildRequires:	automake >= 1:1.7
 BuildRequires:	ghostscript-devel >= 8.62
 BuildRequires:	libtool
+BuildRequires:	pkgconfig
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
