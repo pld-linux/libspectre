@@ -1,11 +1,11 @@
 Summary:	A library for rendering PostScript documents
 Name:		libspectre
-Version:	0.2.3
+Version:	0.2.4
 Release:	1
 License:	GPL v2+
 Group:		Libraries
 Source0:	http://libspectre.freedesktop.org/releases/%{name}-%{version}.tar.gz
-# Source0-md5:	9c5867e970d1bad5f80809bfdb4306c1
+# Source0-md5:	1dddf8d28761372c74153d6fbc644574
 URL:		http://libspectre.freedesktop.org/
 BuildRequires:	autoconf >= 2.59
 BuildRequires:	automake >= 1:1.7
