@@ -1,4 +1,5 @@
 Summary:	A library for rendering PostScript documents
+Summary(pl.UTF-8):	Biblioteka do renderowania dokumentów postscriptowych
 Name:		libspectre
 Version:	0.2.6
 Release:	1
@@ -12,12 +13,17 @@ BuildRequires:	automake >= 1:1.7
 BuildRequires:	ghostscript-devel >= 8.62
 BuildRequires:	libtool
 BuildRequires:	pkgconfig
+Requires:	ghostscript >= 8.62
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 Small library for rendering PostScript documents. It provides a
 convenient easy to use API for handling and rendering PostScript
 documents.
+
+%description -l pl.UTF-8
+Mała biblioteka do renderowania dokumentów postscriptowych. Udostępnia
+łatwe w użyciu API do obsługi i renderowania PostScriptu.
 
 %package devel
 Summary:	Header files for libspectre library
@@ -54,6 +60,7 @@ Statyczna biblioteka libspectre.
 %{__autoheader}
 %{__automake}
 %configure \
+	--disable-silent-rules \
 	--disable-test
 %{__make}
 
