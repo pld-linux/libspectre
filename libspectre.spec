@@ -2,7 +2,7 @@ Summary:	A library for rendering PostScript documents
 Summary(pl.UTF-8):	Biblioteka do renderowania dokumentów postscriptowych
 Name:		libspectre
 Version:	0.2.6
-Release:	1
+Release:	2
 License:	GPL v2+
 Group:		Libraries
 Source0:	http://libspectre.freedesktop.org/releases/%{name}-%{version}.tar.gz
