@@ -1,19 +1,19 @@
 Summary:	A library for rendering PostScript documents
 Summary(pl.UTF-8):	Biblioteka do renderowania dokumentów postscriptowych
 Name:		libspectre
-Version:	0.2.9
+Version:	0.2.12
 Release:	1
 License:	GPL v2+
 Group:		Libraries
 Source0:	https://libspectre.freedesktop.org/releases/%{name}-%{version}.tar.gz
-# Source0-md5:	9701578bd2726089b1fbb96ea019a6d6
+# Source0-md5:	4553bad11936785e658391f6388a8e26
 URL:		https://libspectre.freedesktop.org/
 BuildRequires:	autoconf >= 2.59
 BuildRequires:	automake >= 1:1.7
-BuildRequires:	ghostscript-devel >= 9.24
+BuildRequires:	ghostscript-devel >= 9.53
 BuildRequires:	libtool
 BuildRequires:	pkgconfig
-Requires:	ghostscript >= 9.24
+Requires:	ghostscript >= 9.53
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -30,7 +30,7 @@ Summary:	Header files for libspectre library
 Summary(pl.UTF-8):	Pliki nagłówkowe biblioteki libspectre
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
-Requires:	ghostscript-devel >= 8.61-2
+Requires:	ghostscript-devel >= 9.53
 
 %description devel
 Header files for libspectre library.
@@ -70,6 +70,9 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
+# obsoleted by pkg-config
+%{__rm} $RPM_BUILD_ROOT%{_libdir}/libspectre.la
+
 %clean
 rm -rf $RPM_BUILD_ROOT
 
@@ -85,7 +88,6 @@ rm -rf $RPM_BUILD_ROOT
 %files devel
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_libdir}/libspectre.so
-%{_libdir}/libspectre.la
 %{_includedir}/libspectre
 %{_pkgconfigdir}/libspectre.pc
 
